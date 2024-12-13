@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "outDir": "./dist/cjs",
+        "declaration": false,
+        "declarationMap": false,
+        "declarationDir": null
+    }
+}

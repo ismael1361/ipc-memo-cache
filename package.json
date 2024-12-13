@@ -1,0 +1,66 @@
+{
+	"name": "ipc-memo-cache",
+	"version": "0.1.0",
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"types": "./dist/types/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js",
+			"types": "./dist/types/index.d.ts"
+		},
+		"./esm": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js",
+			"types": "./dist/types/index.d.ts"
+		},
+		"./cjs": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js",
+			"types": "./dist/types/index.d.ts"
+		}
+	},
+	"scripts": {
+		"start": "nodemon",
+		"build-esm": "tsc -p tsconfig-esm.json && npx tsc-esm-fix ---target='dist/esm'",
+		"build-cjs": "tsc -p tsconfig-cjs.json",
+		"build": "rimraf dist && npm run build-esm && npm run build-cjs",
+		"npm:publish": "npm run build && npm publish --access public"
+	},
+	"nodemonConfig": {
+		"watch": [
+			"src",
+			"test"
+		],
+		"ext": "ts,js",
+		"exec": "tsx -r tsconfig-paths/register test/index.ts"
+	},
+	"keywords": [],
+	"author": "ISMAEL1361 <ismael1361@gmail.com> (https://github.com/ismael1361)",
+	"license": "MIT",
+	"repository": "github:ismael1361/ipc-memo-cache",
+	"bugs": {
+		"url": "https://github.com/ismael1361/ipc-memo-cache/issues"
+	},
+	"homepage": "https://github.com/ismael1361/ipc-memo-cache#readme",
+	"description": "",
+	"devDependencies": {
+		"@types/node": "^22.9.2",
+		"@types/resolve": "^1.20.6",
+		"@types/ws": "^8.5.13",
+		"exorcist": "^2.0.0",
+		"nodemon": "^3.1.7",
+		"rimraf": "^6.0.1",
+		"ts-node": "^10.9.2",
+		"tsconfig-paths": "^4.2.0",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2",
+		"uglify-js": "^3.19.3"
+	},
+	"dependencies": {
+		"esm": "^3.2.25",
+		"resolve": "^1.22.8",
+		"ws": "^8.18.0"
+	}
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"ClusterStructure.d.ts","sourceRoot":"","sources":["../../../src/ConnectionStructure/ClusterStructure.ts"],"names":[],"mappings":"AAIA,OAAO,EAAE,mBAAmB,EAAE,MAAM,uBAAuB,CAAC;AAI5D,qBAAa,gBAAiB,SAAQ,mBAAmB;IACxD,OAAO,CAAC,WAAW,CAAkC;gBAEzC,EAAE,QAAQ,EAAE,GAAE;QAAE,QAAQ,EAAE,OAAO,CAAA;KAAuB;IAoBpE,WAAW;IA+DX,WAAW;IA8BX,KAAK;CAIL"}

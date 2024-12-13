@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+*.tgz
+src
+test
+.gitignore
+.prettierrc.json
+tsconfig-cjs.json
+tsconfig-esm.json
+tsconfig.json
